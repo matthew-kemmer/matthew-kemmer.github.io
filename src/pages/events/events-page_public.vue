@@ -16,13 +16,13 @@
 			<h3>{{event.title}}</h3>
 			<div class="event-icon-container">
 				<div>
-					<img src="images/location.svg" width="25" height="25" />
+					<img :src="locationIcon" width="25" height="25" />
 				</div>
 				<div>
-					<img src="images/videos.svg" width="25" height="25" />
+					<img :src="videosIcon" width="25" height="25" />
 				</div>
 				<div>
-					<img src="images/results.svg" width="25" height="25" />
+					<img :src="resultsIcon" width="25" height="25" />
 				</div>
 				<div>
 					<span>{{event.location}}</span>
@@ -41,9 +41,16 @@
 </template>
 
 <script>
+import LocationIcon from '@/assets/images/location.svg';
+import VideosIcon from '@/assets/images/videos.svg';
+import ResultsIcon from '@/assets/images/results.svg';
+
 export default {
 	data() {
 		return {
+			locationIcon: LocationIcon,
+			videosIcon: VideosIcon,
+			resultsIcon: ResultsIcon,
 			events: [
 				{
 					title: "WFC 2023",

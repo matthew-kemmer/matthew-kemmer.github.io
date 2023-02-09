@@ -29,25 +29,29 @@
 </template>
 
 <script>
+import HackySackIcon from '@/assets/images/icon_hackysack_white.svg';
+import FreestyleIcon from '@/assets/images/icon_freestyle_white.svg';
+import NetIcon from '@/assets/images/icon_net_white.svg';
+
 export default {
 	data() {
 		return {
 			styles: [
 				{
 					title: "HACKY SACK",
-					imagePath: "images/Icon_HackySack_White.svg",
+					imagePath: HackySackIcon,
 					description: "Hacky sack is the original and most well-known footbag game. Fun and easy to pick-up; grab a bag with some friends, and keep it off the ground together.",
 					linkHash: "hackysack"
 				},
 				{
 					title: "FREESTYLE FOOTBAG",
-					imagePath: "images/Icon_Freestyle_White.svg",
+					imagePath: FreestyleIcon,
 					description: "Freestyle footbag is a fast-paced, creative, and technical sport centered about doing tricks with a footbag and your legs. Great for exercising the body and the mind.",
 					linkHash: "freestyle"
 				},
 				{
 					title: "FOOTBAG NET",
-					imagePath: "images/Icon_Net_White.svg",
+					imagePath: NetIcon,
 					description: "Footbag net is an acrobatic sport played over a net and using only your feet. Play solo or with a partner for an intense competitive experience.",
 					linkHash: "net"
 				}

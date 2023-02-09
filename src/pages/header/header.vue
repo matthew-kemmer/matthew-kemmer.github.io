@@ -2,30 +2,27 @@
 	<nav>
 		<div id="container">
 			<router-link to="/">
-				<img id="logo" src="images/logo.svg" width="300" height="35"/>
+				<img id="logo" :src="logoImage" width="300" height="35"/>
 			</router-link>
 
 			<div id="menu-options">
 				<router-link to="/">NEW PLAYERS</router-link>
 				<router-link to="/styles">DISCIPLINES</router-link>
 				<router-link to="/sponsors">SPONSORS</router-link>
-				<router-link to="/"><i id="email-icon" class="fa-regular fa-envelope"></i></router-link>
-				<!-- <Slide>
-					<a id="home" href="#">
-						<span>Home</span>
-					</a>
-				</Slide> -->
+				<!-- <router-link to="/"><i id="email-icon" class="fa-regular fa-envelope"></i></router-link> -->
 			</div>
 		</div>
 	</nav>
 </template>
 
 <script>
-import SvgIcon from "@/components/svg-icon.vue";
+import Logo from '@/assets/images/logo.svg';
 
 export default {
-	components: {
-		SvgIcon
+	data() {
+		return {
+			logoImage: Logo
+		}
 	}
 }
 </script>

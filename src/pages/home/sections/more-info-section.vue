@@ -19,26 +19,23 @@
 </template>
 
 <script>
-import SvgIcon from "@/components/svg-icon.vue";
+import ThumbIcon from '@/assets/images/thumb.svg';
+import CalendarIcon from '@/assets/images/calendar.svg';
 
 export default {
-	components: {
-		SvgIcon
-	},
-
 	data() {
 		return {
 			moreInfoElements: [
 				{
 					title: "JOIN THE COMMUNITY",
 					body: "Find information on how to start playing, find equipment, and connect with other players.",
-					svg: "images/thumb.svg",
+					svg: ThumbIcon,
 					link: '/community'
 				},
 				{
 					title: "EVENTS",
 					body: "Find information on hosting and attending footbag events.",
-					svg: "images/calendar.svg",
+					svg: CalendarIcon,
 					link: '/events'
 				}
 			]

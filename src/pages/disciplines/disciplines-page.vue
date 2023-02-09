@@ -26,6 +26,17 @@
 </template>
 
 <script>
+import HackySackIcon_White from '@/assets/images/icon_hackysack_white.svg';
+import HackySackIcon_Green from '@/assets/images/icon_hackysack_green.svg';
+import FreestyleIcon_White from '@/assets/images/icon_freestyle_white.svg';
+import FreestyleIcon_Green from '@/assets/images/icon_freestyle_green.svg';
+import NetIcon_White from '@/assets/images/icon_net_white.svg';
+import NetIcon_Green from '@/assets/images/icon_net_green.svg';
+import TwoSquareIcon_White from '@/assets/images/icon_twosquare_white.svg';
+import TwoSquareIcon_Green from '@/assets/images/icon_twosquare_green.svg';
+import GolfIcon_White from '@/assets/images/icon_golf_white.svg';
+import GolfIcon_Green from '@/assets/images/icon_golf_green.svg';
+
 export default {
 	data() {
 		return {
@@ -92,9 +103,48 @@ unte sectoremodit vellupt iorrorero et faceaquatia voloreperro tenihit eicid.`,
 
 	methods: {
 		getIconPath(iconName, index) {
-			const iconColor = (index % 2 === 0) ? 'White' : 'Green';
-
-			return `images/Icon_${iconName}_${iconColor}.svg`
+			switch(iconName) {
+				case 'HackySack': {
+					if(index % 2 === 0) {
+						return HackySackIcon_White;
+					} else {
+						return HackySackIcon_Green;
+					}
+					break;
+				}
+				case 'Freestyle': {
+					if(index % 2 === 0) {
+						return FreestyleIcon_White;
+					} else {
+						return FreestyleIcon_Green;
+					}
+					break;
+				}
+				case 'Net': {
+					if(index % 2 === 0) {
+						return NetIcon_White;
+					} else {
+						return NetIcon_Green;
+					}
+					break;
+				}
+				case 'TwoSquare': {
+					if(index % 2 === 0) {
+						return TwoSquareIcon_White;
+					} else {
+						return TwoSquareIcon_Green;
+					}
+					break;
+				}
+				case 'Golf': {
+					if(index % 2 === 0) {
+						return GolfIcon_White;
+					} else {
+						return GolfIcon_Green;
+					}
+					break;
+				}
+			}
 		}
 	}
 }

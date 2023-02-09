@@ -55,7 +55,7 @@ export default {
 				{
 					title: "WFC 2023",
 					location: "Medellin, COLOMBIA",
-					imagePath: "images/wfc-logos/WFC2023.JPG"
+					imagePath: "images/wfc-logos/WFC2023.jpg"
 				},
 				{
 					title: "WFC 2022",

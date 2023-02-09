@@ -1,0 +1,22 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "compilerOptions": {
+    "baseUrl": ".",
+		"importsNotUsedAsValues": "preserve",
+    "paths": {
+      "@/*": ["./src/*"],
+			"@shared/*": ["../shared/*"],
+			"@models/*": ["../shared/models/*"],
+			"@enums/*": ["../shared/enums/*"]
+    },
+		"strictPropertyInitialization": false,
+		"noImplicitAny": false
+  },
+
+  "references": [
+    {
+      "path": "./tsconfig.vite-config.json"
+    }
+  ]
+}

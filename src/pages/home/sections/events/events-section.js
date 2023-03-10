@@ -1,10 +1,13 @@
 import './events-section.css';
 import { events } from '../../../../data/events/events-data';
-import ButtonLink from '../../../../components/button-link/button-link';
+import { ButtonLink } from '../../../../components/links/link-components';
 
-function EventsSectionEvent(event) {
+const latestEvent = events[0];
+const pastEvents = [events[1], events[2]];
+
+function EventsSectionItem(event) {
   return (
-    <div className="events-section-event">
+    <div className="events-section-event" key={`previous-event_${event.title}`}>
       <div className="event-logo-container">
         <img src={event.imagePath} className="event-logo" />
       </div>
@@ -21,14 +24,13 @@ function EventsSection() {
       <div id="events-section-events-container">
         <div>
           <h3 className="events-section-subheader"><strong>UPCOMING EVENTS</strong></h3>
-          {EventsSectionEvent(events[0])}
+          {EventsSectionItem(latestEvent)}
         </div>
         <div id="events-section-divider"></div>
         <div>
           <h3 className="events-section-subheader"><strong>PAST EVENTS</strong></h3>
           <div id="events-section-past-events-container">
-            {EventsSectionEvent(events[1])}
-            {EventsSectionEvent(events[2])}
+            { pastEvents.map(pastEvent => EventsSectionItem(pastEvent)) }
           </div>
         </div>
       </div>

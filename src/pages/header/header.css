@@ -16,6 +16,8 @@ nav {
 	max-height: 45px;
 	cursor: pointer;
 	color: var(--color-secondary);
+  height: 35;
+  width: 300;
 }
 
 #menu-options a {

@@ -1,0 +1,10 @@
+#not-found-page {
+  background-color: var(--color-primary);
+  text-align: center;
+  color: white;
+}
+
+#not-found-image {
+  width: 400px;
+  height: 400px;
+}

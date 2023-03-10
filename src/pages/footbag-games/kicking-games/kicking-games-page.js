@@ -18,12 +18,12 @@ function KickingGamesPage() {
     return window.innerWidth <= 750;
   }
 
-  function getIconHeader() {
+  function HeaderIcons() {
     if(isSingleColumnView === false) {
       return (
         <div id="kicking-games-header-icons">
-          { kickingGames.map((kickingGame, index) =>
-          <div key={`kicking-game-icon_${index}`}>
+          { kickingGames.map(kickingGame =>
+          <div key={`kicking-game-icon_${kickingGame.title}`}>
             <img className="footbag-game-icon" src={kickingGame.icon_green} />
             <h4 className="footbag-game-name">{kickingGame.title}</h4>
           </div>
@@ -35,39 +35,43 @@ function KickingGamesPage() {
     }
   }
 
+  function KickingGameItem(kickingGame, index) {
+    return (
+      <div
+        key={`kicking-game_${kickingGame.title}`}
+        className={`footbag-game-container ${index % 2 == 0 ? 'footbag-game-odd' : 'footbag-game-even'}`}
+      >
+        <div>
+          { (isSingleColumnView === true || index % 2 == 0) && <img className="footbag-game-icon" src={kickingGame.icon_white} /> }
+        </div>
+        <div>
+          <h2 className="footbag-game-name">{kickingGame.title}</h2>
+          <p>{kickingGame.description}</p>
+          <div>
+            <strong>MORE INFO</strong>
+            <ul>
+              { kickingGame.links.map((link, linkIndex) => 
+              <li key={`kicking-game-link_${linkIndex}`}>
+                <a href={link.value}>{link.label}</a>
+              </li>
+              )}
+            </ul>
+          </div>
+          <img src={kickingGame.gifPath} className="footbag-game-gif" />
+        </div>
+        <div>
+          { (isSingleColumnView === false && index % 2 == 1) && <img className="footbag-game-icon" src={kickingGame.icon_green} /> }
+        </div>
+      </div>
+    );
+  }
+
 	return (
 		<div>
 			<h1 id="kicking-games-title">KICKING GAMES</h1>
-			{ getIconHeader() }
+			{ HeaderIcons() }
 			<div>
-				{ kickingGames.map((kickingGame, index) =>
-				<div
-					key={`kicking-game_${index}`}
-					className={`footbag-game-container ${index % 2 == 0 ? 'footbag-game-odd' : 'footbag-game-even'}`}
-				>
-					<div>
-						{ (isSingleColumnView === true || index % 2 == 0) && <img className="footbag-game-icon" src={kickingGame.icon_white} /> }
-					</div>
-					<div>
-						<h2 className="footbag-game-name">{kickingGame.title}</h2>
-						<p>{kickingGame.description}</p>
-						<div>
-							<strong>MORE INFO</strong>
-							<ul>
-								{ kickingGame.links.map((link, linkIndex) => 
-								<li key={`kicking-game-link_${linkIndex}`}>
-                  <a href={link.value}>{link.label}</a>
-                </li>
-								)}
-							</ul>
-						</div>
-						<img src={kickingGame.gifPath} className="footbag-game-gif" />
-					</div>
-					<div>
-						{ (isSingleColumnView === false && index % 2 == 1) && <img className="footbag-game-icon" src={kickingGame.icon_green} /> }
-					</div>
-				</div>
-				)}
+				{ kickingGames.map((kickingGame, index) => KickingGameItem(kickingGame, index))}
 			</div>
 		</div>
 	);

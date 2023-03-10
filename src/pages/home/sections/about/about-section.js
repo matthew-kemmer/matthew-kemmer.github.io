@@ -1,6 +1,6 @@
 import './about-section.css';
 import historyImage from '../../../../assets/images/wfc-logos/WFC2018.jpg';
-import ButtonLink from '../../../../components/button-link/button-link.js';
+import { ButtonLink } from '../../../../components/links/link-components';
 
 function MoreButton() {
   return (

@@ -1,0 +1,32 @@
+#more-info-section {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	text-align: center;
+}
+
+.more-info-icon {
+	height: 85px;
+}
+
+.more-info-button {
+	background-color: var(--color-primary);
+	margin-top: 1em;
+}
+
+.more-info-button-text {
+	color: var(--color-secondary);
+}
+
+.more-info-container {
+	padding-top: 3em;
+}
+
+@media(min-width: 906px) {
+	.more-info-container-right {
+		border-left: 1px solid #333;
+	}
+}
+
+.more-info-body {
+	margin: 2em 5em;
+}

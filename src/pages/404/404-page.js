@@ -1,14 +1,17 @@
 import './404-page.css';
-import notFoundLogo from '../../assets/images/footbag-games/icon_hackysack_green.svg';
+import notFoundImage from '../../assets/images/404.svg';
 import { ButtonLink } from '../../components/links/link-components';
 
 
 function NotFoundPage() {
   return (
     <div id="not-found-page">
-      <img id="not-found-image" src={notFoundLogo} />
-      <p><strong>Oooops!</strong></p>
-      <p>This page doesn't exist.</p>
+      <img id="not-found-image" src={notFoundImage} />
+      <div><strong>Oooops!</strong></div>
+      <div id="not-found-description">
+        <div>This page doesn't exist.</div>
+        <div>The link is broken or the page has been moved.</div>
+      </div>
       <ButtonLink label="BACK TO HOME" route="/" />
     </div>
   );

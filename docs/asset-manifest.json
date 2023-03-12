@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3c929ed5.css",
-    "main.js": "/static/js/main.7ea65259.js",
+    "main.css": "/static/css/main.617a4cd0.css",
+    "main.js": "/static/js/main.4dd60141.js",
     "static/media/WFC2015.jpg": "/static/media/WFC2015.58bab7708ecef54cb6f7.jpg",
     "static/media/WFC2017.jpg": "/static/media/WFC2017.d600dabec61712ca2905.jpg",
     "static/media/WFC2019.jpg": "/static/media/WFC2019.fa844641f93b30f7bd0e.jpg",
@@ -16,6 +16,7 @@
     "static/media/icon_hackysack_white.svg": "/static/media/icon_hackysack_white.d02cbbcac74c2ecc6fa67d982ec0fa33.svg",
     "static/media/WFC2016.png": "/static/media/WFC2016.81478623c3c2910b6310.png",
     "static/media/WFC2014.png": "/static/media/WFC2014.251625bd8a03f1ded089.png",
+    "static/media/404.svg": "/static/media/404.1123205853a3ef30814f59c3964ab8cc.svg",
     "static/media/icon_twosquare_green.svg": "/static/media/icon_twosquare_green.d8ac0a56f9458f9cbedf82b5fba8ac12.svg",
     "static/media/icon_twosquare_white.svg": "/static/media/icon_twosquare_white.4725f48ae012c3f4a229ec554a01f372.svg",
     "static/media/icon_freestyle_white.svg": "/static/media/icon_freestyle_white.6f8af1459d052c8a199e3ad00723a767.svg",
@@ -26,11 +27,11 @@
     "static/media/videos.svg": "/static/media/videos.35f7437de3c53f7689844e783f4e5223.svg",
     "static/media/location.svg": "/static/media/location.eaa801cf04cd5f7f2ca5ccabeac431c8.svg",
     "index.html": "/index.html",
-    "main.3c929ed5.css.map": "/static/css/main.3c929ed5.css.map",
-    "main.7ea65259.js.map": "/static/js/main.7ea65259.js.map"
+    "main.617a4cd0.css.map": "/static/css/main.617a4cd0.css.map",
+    "main.4dd60141.js.map": "/static/js/main.4dd60141.js.map"
   },
   "entrypoints": [
-    "static/css/main.3c929ed5.css",
-    "static/js/main.7ea65259.js"
+    "static/css/main.617a4cd0.css",
+    "static/js/main.4dd60141.js"
   ]
 }
